@@ -59,13 +59,13 @@ p {
 
 img
 {
-  height: 150px;
+  height: 250px;
   width:300px;
   object-fit: cover;
 }
 .card_img
 {
-  height: 150px;
+  height: 250px;
   width:298px;
   object-fit: cover;
   overflow-x: hidden;
@@ -97,7 +97,7 @@ img
   background: hsla(var(--secondary), 5%, 1) 0%;
 }
 .card__background-glow {
-  margin-top: 150px;
+  margin-top: 250px;
   position: absolute;
   width: 100%;
   height: 44.44444%;

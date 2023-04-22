@@ -8,7 +8,14 @@ from django.contrib.auth import *
 
 
 def home(request):
-    return render(request,"index.html")
+    return render(request,"home.html")
 
 def face(request):
     return render(request,"face.html")
+
+def login(request):
+    if(request.method=="POST"):
+        username=request.POST.get("username")
+        username=request.POST.get("password")
+
+    return render(request,"login.html")
