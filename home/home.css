@@ -40,7 +40,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: change-view 2s ease-in infinite;
+	animation: change-view 2s ease-in;
 	animation-fill-mode: forwards;
 }
 
@@ -78,29 +78,87 @@ svg {
 #top-dots {
 	transform-origin: center;
 	animation: rotate 4s ease-in-out infinite alternate;
+	animation: stay 5s, fly-hor 4s ease-in forwards;
 }
 
 #big-centro {
 	animation-delay: -1.5s;
+	animation: stay 5s, fly-ang1 4s ease-in forwards !important;
 }
 
-#outter1 {
+#outter1, #big-outter {
 	animation-delay: -1.2s;
+	animation: stay 5s, fly-ang 4s ease-in forwards !important;
 }
 
 #center {
 	animation-delay: -2.2s;
+	animation: stay 5s, fly-ang 4s ease-in forwards !important;
 }
 
 #bottom-dots,
 #top-dots {
 	animation-duration: 7s;
+	animation: stay 5s, fly-ang1 4s ease-in forwards !important;
 }
 
 #center-lines,
 #outter-center {
 	animation-duration: 6s;
 	animation-delay: -3s;
+	animation: stay 5s, fly-hor1 4s ease-in forwards !important;
+}
+
+@keyframes fly-ang1
+{
+	0%, 60%
+	{
+		transform: translate(0%, 0%);
+	}
+
+	95%, 100%
+	{
+		transform: translate(300%, 100%) rotate(135deg);
+	}	
+}
+
+@keyframes fly-ang
+{
+	0%, 70%
+	{
+		transform: translate(0%, 0%);
+	}
+
+	95%, 100%
+	{
+		transform: translate(300%, 100%) rotate(45deg);
+	}	
+}
+
+@keyframes fly-hor
+{
+	0%, 75%
+	{
+		transform: translate(0%, 0%);
+	}
+
+	95%, 100%
+	{
+		transform: translateY(300%);
+	}
+}
+
+@keyframes fly-hor1
+{
+	0%, 80%
+	{
+		transform: translate(0%, 0%);
+	}
+
+	95%, 100%
+	{
+		transform: translateY(-300%);
+	}
 }
 
 @keyframes rotate {
