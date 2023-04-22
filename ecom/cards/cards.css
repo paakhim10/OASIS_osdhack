@@ -60,21 +60,13 @@ p {
 img
 {
   height: 250px;
-<<<<<<< HEAD
-  width:300px;
-=======
   width:420px;
->>>>>>> 3c3b983f607bf1efff75c2ae1f57a9775d158f24
   object-fit: cover;
 }
 .card_img
 {
   height: 250px;
-<<<<<<< HEAD
-  width:298px;
-=======
   width:418px;
->>>>>>> 3c3b983f607bf1efff75c2ae1f57a9775d158f24
   object-fit: cover;
   overflow-x: hidden;
   border-radius: 0.5rem;
