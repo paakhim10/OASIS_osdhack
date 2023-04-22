@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Michroma&family=Rajdhani&display=swap');
+
+:root
+{
+  --darkbg1: #140617ff;
+  --darkbg2: #070c18;
+  --indigo: #00174Bff;
+  --violet: #411958ff;
+  --purple: #452288ff;
+  --cobalt: #0142A0ff;
+  --vista: #89A9FEff;
+  --lavender: #AEBCFDff;
+  --periwinkle: #DFD4FCff;
+  --color-background: transparent;
+  --color-foreground: #DFD4FCff;
+  --fancy: 'Atomic Age', cursive;
+  --heading: 'Michroma', sans-serif;
+  --body: 'Rajdhani', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("background1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: var(--body);
+  line-height: 1.4;
+  display: flex;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    padding: 36px 48px 48px 48px;
+    background-color: var(--darkbg2);
+    border-radius: 1.5rem;
+    border: 2px solid var(--vista);
+    box-shadow: 0 0 10px var(--vista), 0 0 20px var(--vista), 0 0 30px var(--vista), 0 0 40px var(--indigo), 0 0 70px var(--indigo), 0 0 80px var(--indigo), 0 0 100px var(--indigo), 0 0 150px var(--indigo);
+}
+
+.login-title {
+    color: var(--vista);
+  font-family: var(--heading);
+  padding: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--vista);
+
+}
+
+.login-form input {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 9px;
+  border: none;
+  color: var(--darkbg2);
+  font-family: var(--body);
+}
+
+.login-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--periwinkle);
+}
+
+.btn--form {
+  background-color: var(--purple);
+  color: var(--lavender);
+  align-self: end;
+  padding: 8px;
+  border: none;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 9px;
+  border: none;
+
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: all 0.3s;
+}
+
+button {
+  outline: 1px solid var(--vista);
+}
+
+.btn--form:hover {
+  background-color: var(--lavender);
+  color: var(--purple);
+}
+
+/* @media only screen and (max-width: 600px) {
+  .container {
+  width: 300px;
+  margin: auto;
+  padding: 36px 48px 48px 48px;
+  background-color: var(--cream);
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem var(--brown);
+} */
