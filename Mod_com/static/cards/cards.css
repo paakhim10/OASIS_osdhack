@@ -59,22 +59,14 @@ p {
 
 img
 {
-  height: 250px;
-<<<<<<< HEAD
+  height: 175px;
   width:300px;
-=======
-  width:420px;
->>>>>>> 3c3b983f607bf1efff75c2ae1f57a9775d158f24
   object-fit: cover;
 }
 .card_img
 {
-  height: 250px;
-<<<<<<< HEAD
+  height: 175px;
   width:298px;
-=======
-  width:418px;
->>>>>>> 3c3b983f607bf1efff75c2ae1f57a9775d158f24
   object-fit: cover;
   overflow-x: hidden;
   border-radius: 0.5rem;
@@ -83,8 +75,8 @@ img
 .card {
   position: relative;
   border-radius: 0.5rem;
-  height: 370px;
-  width: 420px;
+  height: 270px;
+  width: 300px;
   background-color: hsla(var(--secondary), 10%, 1);
   transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.2s;
   background-image: radial-gradient(hsla(var(--secondary), 3%, 1) 20%, transparent 20%);
@@ -105,7 +97,7 @@ img
   background: hsla(var(--secondary), 5%, 1) 0%;
 }
 .card__background-glow {
-  margin-top: 250px;
+  margin-top: 175px;
   position: absolute;
   width: 100%;
   height: 44.44444%;
@@ -121,19 +113,18 @@ img
 .card__content {
   position: relative;
   height: 100%;
-  padding: 2.5rem;
+  padding: 2rem;
   overflow: hidden;
   user-select: none;
 }
 .card__title {
-  font-size: 1.4rem;
-  margin-bottom: 3.2rem;
-  margin-top: 14rem;
+  margin-bottom: 3rem;
+  margin-top: 8rem;
   color: var(--neutral-100);
 }
 .card__description {
   color: var(--neutral-200);
-  height: 4.1rem;
+  height: 4rem;
   white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -179,7 +170,6 @@ img
   padding: 0.8rem 1.5rem;
   transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.2s;
   box-shadow: 0px 0px 0px 4px hsla(var(--secondary), 25%, 0);
-  transform: scale(1.1);
 }
 .btn:hover {
   box-shadow: 0px 0px 0px 4px hsla(var(--secondary), 25%, 1);
@@ -228,7 +218,7 @@ img
     margin: 1rem;
     color: var(--neutral-100);
     font-family: "Michroma", sans-serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     text-shadow: 10px 10px 40px var(--neutral-200);
 }
