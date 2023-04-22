@@ -220,3 +220,13 @@ img
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.heading
+{
+    margin: 1rem;
+    color: var(--neutral-100);
+    font-family: "Michroma", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 10px 10px 40px var(--neutral-200);
+}
