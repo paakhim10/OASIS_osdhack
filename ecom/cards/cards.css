@@ -20,11 +20,6 @@ body {
   background-size: 2rem 2rem;
 }
 
-.content
-{
-  margin-top: -3rem;
-}
-
 button {
   border: none;
   outline: none;
@@ -49,11 +44,13 @@ p {
 
 .cards {
   display: grid;
-  width: calc(100% - 50%);
-  grid-template-columns: repeat(2, 1fr);
+  width: calc(100%);
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
   gap: 1rem;
   margin: auto;
+  margin-right: 10rem;
+  margin-left: 10rem;
 }
 
 .cards:hover > .card::before {
