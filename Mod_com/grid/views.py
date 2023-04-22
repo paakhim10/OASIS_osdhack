@@ -9,3 +9,6 @@ from django.contrib.auth import *
 
 def home(request):
     return render(request,"index.html")
+
+def face(request):
+    return render(request,"face.html")
