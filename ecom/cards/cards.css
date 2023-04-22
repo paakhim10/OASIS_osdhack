@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Michroma&family=Rajdhani&display=swap');
 :root {
-  --primary: 289, 59%;
-  --secondary: 264, 100%;
+  --primary: 261, 60%;
+  --secondary: 222, 55%;
   --neutral-50: rgb(225, 228, 245);
   --neutral-100: #AEBCFDff;
   --neutral-200: #89A9FEff;
@@ -44,21 +44,39 @@ p {
 
 .cards {
   display: grid;
-  width: calc(100% - 50%);
-  grid-template-columns: repeat(2, 1fr);
+  width: calc(100%);
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
   gap: 1rem;
   margin: auto;
+  margin-right: 10rem;
+  margin-left: 10rem;
 }
 
 .cards:hover > .card::before {
   opacity: 1;
 }
 
+img
+{
+  height: 150px;
+  width:300px;
+  object-fit: cover;
+}
+.card_img
+{
+  height: 150px;
+  width:298px;
+  object-fit: cover;
+  overflow-x: hidden;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
 .card {
   position: relative;
   border-radius: 0.5rem;
-  height: 256px;
+  height: 270px;
+  width: 300px;
   background-color: hsla(var(--secondary), 10%, 1);
   transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.2s;
   background-image: radial-gradient(hsla(var(--secondary), 3%, 1) 20%, transparent 20%);
@@ -79,9 +97,10 @@ p {
   background: hsla(var(--secondary), 5%, 1) 0%;
 }
 .card__background-glow {
+  margin-top: 150px;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 44.44444%;
   border-radius: inherit;
   content: "";
   background: radial-gradient(256px circle at var(--mouse-x) var(--mouse-y), hsla(var(--primary), 5%, 1) 0%, hsla(var(--secondary), 5%, 1) 100%);
@@ -89,7 +108,7 @@ p {
   transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.7s;
 }
 .card:hover .card__background-glow {
-  opacity: 1;
+  opacity: 1
 }
 .card__content {
   position: relative;
@@ -99,7 +118,8 @@ p {
   user-select: none;
 }
 .card__title {
-  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 8rem;
   color: var(--neutral-100);
 }
 .card__description {
@@ -112,7 +132,7 @@ p {
 .card__btn {
   position: absolute;
   bottom: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .card::before, .card::after {
   border-radius: inherit;
@@ -191,4 +211,14 @@ p {
   .cards {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.heading
+{
+    margin: 1rem;
+    color: var(--neutral-100);
+    font-family: "Michroma", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 10px 10px 40px var(--neutral-200);
 }

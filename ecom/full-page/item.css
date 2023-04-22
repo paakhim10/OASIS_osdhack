@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Michroma&family=Rajdhani&display=swap');
+:root {
+  --primary: 261, 60%;
+  --secondary: 222, 55%;
+  --neutral-50: rgb(225, 228, 245);
+  --neutral-100: #AEBCFDff;
+  --neutral-200: #89A9FEff;
+}
+* {
+  font-family: "Rajdhani", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsla(var(--secondary), 2%, 1);
+  background-image: radial-gradient(hsla(var(--secondary), 3%, 1) 20%, transparent 20%);
+  background-position: 0 0;
+  background-size: 2rem 2rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: clamp(0.6rem, 0.4rem + 0.4vw, 0.8rem);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: clamp(0.8rem, 0.1rem + 1.4vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.6rem, 0.4rem + 0.4vw, 0.8rem);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cards {
+  display: grid;
+  width: calc(100% - 50%);
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.cards:hover > .card::before {
+  opacity: 1;
+}
+
+img
+{
+  height: 25rem;
+  width:60rem;
+  object-fit: cover;
+}
+.card_img
+{
+  height: 25rem;
+  width: 59.8rem;
+  object-fit: cover;
+  overflow-x: hidden;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.card {
+  position: absolute;
+  border-radius: 0.5rem;
+  height: 50rem;
+  width: 60rem;
+  background-color: hsla(var(--secondary), 10%, 1);
+  transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.2s;
+  background-image: radial-gradient(hsla(var(--secondary), 3%, 1) 20%, transparent 20%);
+  background-position: 0 0;
+  background-size: 2rem 2rem;
+  box-shadow: 0px 0px 0px 4px hsla(var(--secondary), 5%, 0);
+}
+.card:hover {
+  box-shadow: 0px 0px 0px 4px hsla(var(--secondary), 5%, 1);
+}
+.card:active {
+  transform: scale(0.98);
+}
+.card__background {
+  position: absolute;
+  border-radius: inherit;
+  inset: 1px;
+  background: hsla(var(--secondary), 5%, 1) 0%;
+}
+.card__background-glow 
+{
+  margin-top: 25rem;
+  position: absolute;
+  width: 100%;
+  height: 44.44444%;
+  border-radius: inherit;
+  content: "";
+  background: radial-gradient(256px circle at var(--mouse-x) var(--mouse-y), hsla(var(--primary), 5%, 1) 0%, hsla(var(--secondary), 5%, 1) 100%);
+  opacity: 0;
+  transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.7s;
+}
+.card:hover .card__background-glow 
+{
+  opacity: 1;
+}
+
+.card__content 
+{
+  position: relative;
+  height: 100%;
+  padding: 2rem;
+  overflow: hidden;
+  user-select: none;
+}
+
+.card__title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    margin-top: 24.5rem;
+    color: var(--neutral-100);
+}
+.card__description {
+    font-size: 1rem;
+  color: var(--neutral-200);
+  height: 12rem;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__btn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1.5rem;
+}
+.card::before, .card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: opacity 0.5s cubic-bezier(0.3, 0.8, 0.5, 0.5);
+}
+.card::before {
+  opacity: 0;
+  background: radial-gradient(384px circle at var(--mouse-x) var(--mouse-y), hsla(var(--secondary), 45%, 1), transparent 50%);
+}
+.card::after {
+  opacity: 0;
+  background: radial-gradient(128px circle at var(--mouse-x) var(--mouse-y), hsla(var(--secondary), 45%, 1), transparent 40%);
+  filter: blur(6rem);
+  z-index: -1;
+  transition-duration: 1s;
+}
+.card:hover::before, .card:hover::after {
+  opacity: 1;
+}
+
+.btn {
+    font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 10rem;
+  background: radial-gradient(circle at 50% 100%, hsla(var(--primary), 50%, 1) 0%, hsla(var(--secondary), 50%, 1) 100%);
+  color: var(--neutral-50);
+  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.2s;
+  box-shadow: 0px 0px 0px 4px hsla(var(--secondary), 25%, 0);
+}
+.btn:hover {
+  box-shadow: 0px 0px 0px 4px hsla(var(--secondary), 25%, 1);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  filter: blur(4rem);
+  inset: -2px;
+  opacity: 0.2;
+  transition: cubic-bezier(0.3, 0.8, 0.5, 0.5) all 0.5s;
+}
+.btn:hover::after {
+  opacity: 0.5;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, transparent, hsla(var(--secondary), 85%, 1), transparent);
+  width: 1.5rem;
+  height: 1px;
+  top: 0;
+  opacity: 0.5;
+  transform: translateX(0%);
+}
+.btn:hover::before {
+  opacity: 1;
+  transform: translateX(var(--mouse-x));
+}
+.btn:not(:hover)::before {
+  transition: all 1s cubic-bezier(0.3, 0.8, 0.5, 0.5);
+}
+
+@media screen and (max-width: 1000px) 
+{
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.heading
+{
+    margin: 1rem;
+    color: var(--neutral-100);
+    font-family: "Michroma", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 10px 10px 40px var(--neutral-200);
+}
