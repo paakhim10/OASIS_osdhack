@@ -5,13 +5,13 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import "./App.css";
-// import microPhoneIcon from "./Assets/Images/microphone.png";
+// import microPhoneIcon from "./Assets/Images/microphone.png";+
 import Home from "./Pages/Home/Home";
 const Manual = React.lazy(() => import('./Pages/Manual/Manual'));
 
-
-
-
+// import microPhoneIcon from "./Assets/Images/microphone.png";+
+// import microPhoneIcon from "./Assets/Images/microphone.png";+
+// import microPhoneIcon from "./Assets/Images/microphone.png";+
 function App() {
   const navigate = useNavigate();
   const [searchData, setSearchData] = useState({})
@@ -26,7 +26,7 @@ function App() {
       command: "google help",
       callback: () => {
         setSearchData("manual");
-        
+
       }
     },
     {
