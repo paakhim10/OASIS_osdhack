@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Michroma&family=Rajdhani&display=swap');
+
+:root
+{
+  --darkbg1: #140617ff;
+  --darkbg2: #070c18;
+  --indigo: #00174Bff;
+  --violet: #411958ff;
+  --purple: #452288ff;
+  --cobalt: #0142A0ff;
+  --vista: #89A9FEff;
+  --lavender: #AEBCFDff;
+  --periwinkle: #DFD4FCff;
+  --color-background: transparent;
+  --color-foreground: #DFD4FCff;
+  --fancy: 'Atomic Age', cursive;
+  --heading: 'Michroma', sans-serif;
+  --body: 'Rajdhani', sans-serif;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--darkbg2);
+    background-image: url("../../Assets/Images/background.png");
+    background-repeat: no-repeat;
+}
+
+.heading
+{
+    color: var(--periwinkle);
+    font-family: var(--heading);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.rules
+{
+    font-size: 2rem;
+    margin-top: 5rem;
+    color: var(--lavender);
+    font-family: var(--body);
+    text-align: left;
+    text-shadow: 20px 20px 10px black;
+}
+
+.rem
+{
+    font-size: 2.3rem;
+    color: var(--periwinkle);
+    text-align: center;
+    text-shadow: 10px 10px 40px var(--lavender);
+}

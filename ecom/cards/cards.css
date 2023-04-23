@@ -68,7 +68,7 @@ img
   height: 250px;
   width:418px;
   object-fit: cover;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   border-radius: 0.5rem;
   z-index: 1;
 }

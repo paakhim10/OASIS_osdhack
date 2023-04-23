@@ -1,0 +1,28 @@
+
+    // <div className="microphone-wrapper">
+    //   <div className="mircophone-container">
+    //     <div
+    //       className="microphone-icon-container"
+    //       ref={microphoneRef}
+    //       onClick={handleListing}
+    //     >
+    //       <img src={microPhoneIcon} className="microphone-icon" alt=""/>
+    //     </div>
+    //     <div className="microphone-status">
+    //       {isListening ? "Listening........." : "Click to start Listening"}
+    //     </div>
+    //     {isListening && (
+    //       <button className="microphone-stop btn" onClick={stopHandle}>
+    //         Stop
+    //       </button>
+    //     )}
+    //   </div>
+    //   {transcript && (
+    //     <div className="microphone-result-container">
+    //       <div className="microphone-result-text">{transcript}</div>
+    //       <button className="microphone-reset btn" onClick={handleReset}>
+    //         Reset
+    //       </button>
+    //     </div>
+    //   )}
+    // </div>
