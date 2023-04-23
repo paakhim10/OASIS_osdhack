@@ -158,7 +158,7 @@ const Home = () => {
                     </div> --> */}
             </div>
             <div className="bullets">
-                ⟠ Say "OASIS, help." for manual.<br/><br/>⟠ Say "OASIS, start." to get started.
+                ⟠ Say "Google, help." for manual.<br/><br/>⟠ Say "OASIS, start." to get started.
             </div>
         </div>
         </>
