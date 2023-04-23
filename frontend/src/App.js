@@ -1,19 +1,17 @@
-import React, {useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import {useRef, useState} from "react";
 // import React from "react";
 
-import { Route, Routes,useNavigate} from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import "./App.css";
-// import microPhoneIcon from "./Assets/Images/microphone.png";
+// import microPhoneIcon from "./Assets/Images/microphone.png";+
 import Home from "./Pages/Home/Home";
 const Manual = React.lazy(() => import('./Pages/Manual/Manual'));
 
-
-
-
 function App() {
   const navigate = useNavigate();
+  const [searchData, setSearchData] = useState({})
   const commands = [
     {
       command: "change background colour to *",
@@ -24,21 +22,44 @@ function App() {
     {
       command: "google help",
       callback: () => {
-        navigate('/manual');
-        handleReset();
+        setSearchData("manual");
+
       }
-    }
+    },
+    {
+      command: "google search *",
+      callback: (product) => {
+        setSearchData(product);
+        fetch('/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(searchData)
+        })
+          .then(response => {
+            if (response.ok) {
+              console.log('Message sent successfully!');
+            } else {
+              console.error('Failed to send message.');
+            }
+          })
+          .catch(error => {
+            console.error(error);
+          });
+      }
+    },
   ];
   const { transcript, resetTranscript } = useSpeechRecognition({ commands });
-  useEffect(()=>{
+  useEffect(() => {
     console.log(transcript);
-  },[transcript]);
-  console.log(transcript)
+  }, [transcript]);
+  // console.log(transcript)
   // const [isListening, setIsListening] = useState(false);
   // const microphoneRef = useRef(null);
-  useEffect(()=>{
+  useEffect(() => {
     handleListing();
-  },[])
+  }, [])
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return (
@@ -93,10 +114,10 @@ function App() {
     //   )}
     // </div>
     <>
-        <Routes>
-          <Route path="/" element={<Home handleReset={handleReset} commands={commands} handleListing={handleListing}/>} />
-          <Route path="/manual" element={<Manual handleReset={handleReset} commands={commands} handleListing={handleListing}/>} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home handleReset={handleReset} commands={commands} handleListing={handleListing} />} />
+
+      </Routes>
     </>
   );
 }
