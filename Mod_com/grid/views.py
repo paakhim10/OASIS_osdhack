@@ -13,10 +13,17 @@ def home(request):
 def face(request):
     return render(request,"face.html")
 
-def login(request):
+def userlogin(request):
     if(request.method=="POST"):
         username=request.POST.get("username")
-        username=request.POST.get("password")
+        password=request.POST.get("password")
+        uuser=authenticate(username=username,password=password)
+        
+        if(uuser is not None):
+            login(request,uuser)
+            return redirect("home")
+        else:
+            return redirect("login")
         
     return render(request,"login.html")
 
