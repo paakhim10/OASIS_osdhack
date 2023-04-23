@@ -9,9 +9,6 @@ import "./App.css";
 import Home from "./Pages/Home/Home";
 const Manual = React.lazy(() => import('./Pages/Manual/Manual'));
 
-// import microPhoneIcon from "./Assets/Images/microphone.png";+
-// import microPhoneIcon from "./Assets/Images/microphone.png";+
-// import microPhoneIcon from "./Assets/Images/microphone.png";+
 function App() {
   const navigate = useNavigate();
   const [searchData, setSearchData] = useState({})
