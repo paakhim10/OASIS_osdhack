@@ -1,28 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/push-to-talk-button.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/transcript-drawer.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@speechly/browser-ui/core/intro-popup.js"></script>
 
-    // <div className="microphone-wrapper">
-    //   <div className="mircophone-container">
-    //     <div
-    //       className="microphone-icon-container"
-    //       ref={microphoneRef}
-    //       onClick={handleListing}
-    //     >
-    //       <img src={microPhoneIcon} className="microphone-icon" alt=""/>
-    //     </div>
-    //     <div className="microphone-status">
-    //       {isListening ? "Listening........." : "Click to start Listening"}
-    //     </div>
-    //     {isListening && (
-    //       <button className="microphone-stop btn" onClick={stopHandle}>
-    //         Stop
-    //       </button>
-    //     )}
-    //   </div>
-    //   {transcript && (
-    //     <div className="microphone-result-container">
-    //       <div className="microphone-result-text">{transcript}</div>
-    //       <button className="microphone-reset btn" onClick={handleReset}>
-    //         Reset
-    //       </button>
-    //     </div>
-    //   )}
-    // </div>
+    <title>Speechly Example</title>
+    <script src="https://api.speechly.com/sdk/v1/speechly.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #008CBA;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #transcript {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+  <push-to-talk-button
+    appid='169819cf-b276-4853-b0e2-d36f092546b2'
+    intro="Try saying 'Google Help'"
+    placement="bottom">
+  </push-to-talk-button>
+  <transcript-drawer
+    hint='["Try: Hello", "Try: Hi there"]'>
+  </transcript-drawer>
+  <intro-popup>
+    <span slot="priming-body">
+      You'll be able to control the website faster with voice.
+    </span>
+  </intro-popup>
+</body>
+    <h1>Speech to text</h1>
+    <div id="transcript"></div>
+
+  </body>
+</html>
